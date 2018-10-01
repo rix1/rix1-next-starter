@@ -1,7 +1,11 @@
 {
-  "name": "46brew",
+  "name": "rix1-next-starter",
   "version": "1.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rix1/rix1-next-starter"
+  },
   "author": "rix1",
   "scripts": {
     "dev": "next",
