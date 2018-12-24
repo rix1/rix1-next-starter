@@ -21,7 +21,7 @@ const Index = () => (
   <ThemeProvider theme={{ colors, sizes }}>
     <Page title="Rix1s NextJS starter ">
       <Content>
-        <p>This is Rix1's NextJS starter. It's set up with the following:</p>
+        <p>This is Rix1s NextJS starter. Its set up with the following:</p>
         <ul>
           <li>Tachyons + Emotion (styling)</li>
           <li>Flow</li>

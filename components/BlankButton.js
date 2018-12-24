@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { cx } from 'emotion';
+import { cx } from '@emotion/core';
 
 type Props = {
   children: React$Node,

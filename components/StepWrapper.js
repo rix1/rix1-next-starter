@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { cx, css } from 'react-emotion';
+import { cx, css } from '@emotion/core';
 
 type StepWrapperProps = {
   children: React$Node,

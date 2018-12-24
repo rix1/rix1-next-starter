@@ -1,5 +1,5 @@
 // @flow
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import getArrayValueFromPercent from '../../lib/getArrayValueFromPercent';
 
 const StyledRange = styled.input`

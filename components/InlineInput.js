@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { cx, css } from 'react-emotion';
+import { cx, css } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
 
 type Props = { className?: string, error?: boolean };

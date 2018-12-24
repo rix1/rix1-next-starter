@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import { cx } from 'react-emotion';
+import { cx } from '@emotion/core';
 import uuid from 'uuid/v4';
 
 import Line from '../Line';
