@@ -1,6 +1,5 @@
 // @flow
 import React, { PureComponent } from 'react';
-import { cx } from '@emotion/core';
 import uuid from 'uuid/v4';
 
 import Line from '../Line';
@@ -53,7 +52,7 @@ class Range extends PureComponent<Props, State> {
 
     return (
       <div
-        className={cx('relative br3 f4 f3-ns', className)}
+        className={`relative br3 f4 f3-ns ${className || ''}`}
         style={{
           backgroundColor: `hsla(48, ${value}%, ${100 - 0.25 * value}%, 1 )`,
         }}>

@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { cx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
 
 type Props = { className?: string, error?: boolean };
@@ -12,20 +12,17 @@ const InlineInput = ({
   ...rest
 }: Props & App$ThemeProps = {}) => (
   <input
-    className={cx(
-      'ph2',
-      className,
-      css`
-        border: none;
-        border-bottom: ${theme.sizes.lineWidth} dotted ${error ? 'red' : 'gray'};
-        outline: none;
-        width: 3em;
-        text-align: right;
-        &:focus {
-          border-bottom: ${theme.sizes.lineWidth} solid ${theme.colors.orange};
-        }
-      `,
-    )}
+    css={css`
+      border: none;
+      border-bottom: ${theme.sizes.lineWidth} dotted ${error ? 'red' : 'gray'};
+      outline: none;
+      width: 3em;
+      text-align: right;
+      &:focus {
+        border-bottom: ${theme.sizes.lineWidth} solid ${theme.colors.orange};
+      }
+    `}
+    className={`ph2 ${className}`}
     {...rest}
   />
 );

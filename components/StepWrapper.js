@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { cx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 
 type StepWrapperProps = {
   children: React$Node,
@@ -17,13 +17,10 @@ const StepWrapper = ({
 }: StepWrapperProps = {}) => (
   <div
     ref={forwardRef}
-    className={cx(
-      'mv6',
-      className,
-      css`
-        opacity: ${isActive ? 1 : 0.5};
-      `,
-    )}>
+    css={css`
+      opacity: ${isActive ? 1 : 0.5};
+    `}
+    className={`mv6 ${className}`}>
     {children}
   </div>
 );
