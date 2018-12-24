@@ -1,6 +1,6 @@
 // @flow
 import styled from 'react-emotion';
-import getStringFromValue from '../../lib/getStringFromValue';
+import getArrayValueFromPercent from '../../lib/getArrayValueFromPercent';
 
 const StyledRange = styled.input`
   -webkit-appearance: none;
@@ -15,7 +15,10 @@ const StyledRange = styled.input`
     &::-webkit-slider-thumb {
       box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.04);
       background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 18 18"><text text-anchor="middle" dy=".35em" y="50%" x="50%" font-size="14px">${props =>
-        getStringFromValue(props.value, props.activeSliders)}</text></svg>');
+        getArrayValueFromPercent(
+          props.value,
+          props.activeSliders,
+        )}</text></svg>');
       transform: translateY(-2px);
     }
   }
@@ -23,7 +26,7 @@ const StyledRange = styled.input`
     -webkit-appearance: none;
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 18 18"><text text-anchor="middle" dy=".35em" y="50%" x="50%" font-size="14px">${props =>
       props.hasChanged
-        ? getStringFromValue(props.value, props.activeSliders)
+        ? getArrayValueFromPercent(props.value, props.activeSliders)
         : props.idleSlider}</text></svg>');
     background-size: contain;
     background-repeat: no-repeat;

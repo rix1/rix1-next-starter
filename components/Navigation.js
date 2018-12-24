@@ -4,7 +4,7 @@ import Link from './Link';
 
 const Navigation = () => (
   <nav>
-    <Link href="/">Home</Link> | <Link href="/about">About</Link>
+    <Link href="/">Home</Link>
   </nav>
 );
 
