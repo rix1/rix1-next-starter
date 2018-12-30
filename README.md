@@ -1,10 +1,11 @@
 # Rix1's Next.js starter &middot;
 
-> Not sure if this is a good idea, but here's yet another boilerplate to get me started on projects faster...
+> This is Rix1s NextJS starter. I have sort of done mise en place so that I can just start cooking PoCs without setting up anything.
 
-It contains the following:
+The kitchen has the following prepared for you
 
-- Tachyons + Emotion (styling)
+- NextJS
+- Tachyons (from CDN) and Emotion for styling
 - Flow
 - Jest
 - ESLint

@@ -3,7 +3,7 @@ import React from 'react';
 import Link from './Link';
 
 const Navigation = () => (
-  <nav>
+  <nav className="ttu tracked">
     <Link href="/">Home</Link>
   </nav>
 );

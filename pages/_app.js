@@ -3,6 +3,7 @@ import App, { Container } from 'next/app';
 
 import Navigation from '../components/Navigation';
 import Link from '../components/Link';
+import Emoji from '../components/Emoji';
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -21,8 +22,8 @@ export default class MyApp extends App {
       <Container>
         <div className="flex flex-column vh-100">
           <header className="tc">
-            <h1 className="f1 fw7 ttu tracked relative dib">
-              Welcome to boilerplate
+            <h1 className="f1 fw7  relative dib">
+              Rix1 starter <Emoji emoji="👩‍🍳" description="Cook" />
             </h1>
             <Navigation />
           </header>
