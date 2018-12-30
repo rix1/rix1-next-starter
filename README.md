@@ -1,6 +1,6 @@
-# Rix1's Next.js starter &middot;
+# Rix1's Next.js starter 👨‍🍳
 
-> This is Rix1s NextJS starter. I have sort of done mise en place so that I can just start cooking PoCs without setting up anything.
+> This is Rix1s NextJS starter. I have sort of done _[mise en place](https://en.wikipedia.org/wiki/Mise_en_place)_ so that I can just start cooking PoCs without setting up anything.
 
 The kitchen has the following prepared for you
 
