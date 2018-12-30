@@ -1,18 +1,16 @@
 // @flow
 import React from 'react';
 import { css } from '@emotion/core';
-import { withTheme } from 'emotion-theming';
 
 type Props = { className?: string, error?: boolean };
 
 const InlineInput = ({
   className = '',
-  theme,
   error = false,
   ...rest
-}: Props & App$ThemeProps = {}) => (
+}: Props = {}) => (
   <input
-    css={css`
+    css={theme => css`
       border: none;
       border-bottom: ${theme.sizes.lineWidth} dotted ${error ? 'red' : 'gray'};
       outline: none;
@@ -27,5 +25,4 @@ const InlineInput = ({
   />
 );
 
-const Wrapped: React$ComponentType<Props> = withTheme(InlineInput);
-export default Wrapped;
+export default InlineInput;

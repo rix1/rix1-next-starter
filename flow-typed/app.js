@@ -8,7 +8,3 @@ declare type App$ThemeType = {
     [App$ColorTypes]: string,
   },
 };
-
-declare type App$ThemeProps = {
-  theme: App$ThemeType,
-};

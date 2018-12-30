@@ -4,21 +4,10 @@ import { ThemeProvider } from 'emotion-theming';
 
 import Content from '../components/Content';
 import Page from '../components/Page';
-
-const colors = {
-  dusty: 'rgba(217, 229, 214, 1);',
-  blue: 'rgba(0, 167, 225, 1);',
-  warm: 'rgba(237, 222, 164, 1);',
-  peach: 'rgba(247, 160, 114, 1);',
-  orange: 'rgba(255, 155, 66, 1);',
-};
-
-const sizes = {
-  lineWidth: '3px',
-};
+import theme from './theme';
 
 const Index = () => (
-  <ThemeProvider theme={{ colors, sizes }}>
+  <ThemeProvider theme={theme}>
     <Page title="Rix1s NextJS starter ">
       <Content>
         <p>This is Rix1s NextJS starter. Its set up with the following:</p>

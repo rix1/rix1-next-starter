@@ -2,7 +2,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { withTheme } from 'emotion-theming';
 
 type Props = {
   position: number,
@@ -17,26 +16,20 @@ const StyledLine = styled.div`
   left: ${props => props.position}%;
 `;
 
-const Line = ({
-  position,
-  contained = false,
-  theme,
-  ...rest
-}: Props & App$ThemeProps = {}) => {
+const Line = ({ position, contained = false, ...rest }: Props = {}) => {
   if (contained) {
     return (
       <div
-        className={css`
+        css={theme => css`
           width: ${theme.sizes.lineWidth};
           position: relative;
           z-index: 1;
         `}>
-        <StyledLine theme={theme} position={position} {...rest} />
+        <StyledLine position={position} {...rest} />
       </div>
     );
   }
-  return <StyledLine theme={theme} position={position} {...rest} />;
+  return <StyledLine position={position} {...rest} />;
 };
 
-const Wrapped: React$ComponentType<Props> = withTheme(Line);
-export default Wrapped;
+export default Line;
