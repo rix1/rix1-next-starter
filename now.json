@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "rix1-next-starter",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ]
+}
