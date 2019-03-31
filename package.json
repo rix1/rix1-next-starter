@@ -17,18 +17,18 @@
     "test": "NODE_ENV=test jest"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.5",
-    "@emotion/styled": "^10.0.5",
-    "babel-plugin-emotion": "^10.0.5",
-    "emotion-theming": "^10.0.5",
-    "eslint-config-otovo": "https://github.com/otovo/eslint-config-otovo.git",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "babel-plugin-emotion": "^10.0.9",
+    "emotion-theming": "^10.0.10",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.5",
+    "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@otovo/eslint-config-otovo": "^2.0.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
