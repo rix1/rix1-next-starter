@@ -2,7 +2,7 @@
 import { PureComponent } from 'react';
 
 type Props = {
-  multiplier: number,
+  multiplier?: number,
   children: (number, boolean, () => void) => React$Node,
 };
 

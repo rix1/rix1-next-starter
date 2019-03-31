@@ -3,7 +3,7 @@
     "browser": true
   },
   "parser": "babel-eslint",
-  "extends": ["otovo/react-recommended"],
+  "extends": ["@otovo/eslint-config-otovo/react-recommended"],
   "plugins": ["emotion"],
   "rules": {
     "emotion/no-vanilla": "error",
