@@ -63,6 +63,7 @@ const Range = (props: Props) => {
         idleSlider={idleSlider}
         onChange={onChangeHandler}
         value={value}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       />
     </div>
