@@ -6,6 +6,12 @@
   "extends": ["@otovo/eslint-config-otovo/react-flow-recommended"],
   "rules": {
     "react/require-default-props": 0,
-    "react/default-props-match-prop-types": 0
+    "react/default-props-match-prop-types": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"]
+      }
+    ]
   }
 }
