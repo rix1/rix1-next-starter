@@ -3,5 +3,9 @@
     "browser": true
   },
   "parser": "babel-eslint",
-  "extends": ["@otovo/eslint-config-otovo/react-flow-recommended"]
+  "extends": ["@otovo/eslint-config-otovo/react-flow-recommended"],
+  "rules": {
+    "react/require-default-props": 0,
+    "react/default-props-match-prop-types": 0
+  }
 }

@@ -2,12 +2,12 @@
 import React from 'react';
 import Emoji from './Emoji';
 
-type Props = {
+type Props = {|
   children: React$Node,
   done: boolean,
-  emoji?: string,
-  advanceButton?: React$Node,
-};
+  emoji: string,
+  advanceButton: React$Node,
+|};
 
 const StepHeading = ({
   advanceButton,

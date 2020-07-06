@@ -9,7 +9,10 @@ type LinkProps = {
 
 const Link = ({ children, href, ...rest }: LinkProps) => (
   <NextLink href={href}>
-    <a className="f5 fw4 dim link near-black pv1" {...rest}>
+    <a
+      className="f5 fw4 dim link near-black pv1"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}>
       {children}
     </a>
   </NextLink>

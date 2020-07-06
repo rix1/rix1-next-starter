@@ -3,7 +3,6 @@ import React from 'react';
 
 import Content from '../components/Content';
 import Page from '../components/Page';
-import theme from '../styles/theme';
 
 const Index = () => (
   <Page title="Rix1s NextJS starter ">

@@ -2,7 +2,7 @@
 import React from 'react';
 import theme from '../styles/theme';
 
-type Props = { className?: string, error?: boolean };
+type Props = {| className: string, error: boolean |};
 
 const InlineInput = ({
   className = '',
@@ -25,7 +25,11 @@ const InlineInput = ({
         border-bottom-color: red;
       }
     `}</style>
-    <input className={`ph2 ${className} ${error ? 'error' : ''}`} {...rest} />
+    <input
+      className={`ph2 ${className} ${error ? 'error' : ''}`}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
+    />
   </>
 );
 

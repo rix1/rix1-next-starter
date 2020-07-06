@@ -28,6 +28,7 @@ export default class MyApp extends App {
             <Navigation />
           </header>
           <div>
+            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             <Component {...pageProps} />
           </div>
 

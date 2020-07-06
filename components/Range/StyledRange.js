@@ -6,21 +6,25 @@ import createInlineSVG from './createInlineSVG';
 type StyledRangeProps = {|
   sliderIcons: string[],
   hasChanged: boolean,
-  idleSlider: string,
+  idleSlider?: string,
   value: number,
-  max: number | string,
-  min: number | string,
+  max: number,
+  min: number,
   step: number,
   onChange: (SyntheticInputEvent<HTMLInputElement>) => void,
   onBlur: (SyntheticFocusEvent<HTMLInputElement>) => void,
 |};
 
 const StyledRange = ({
-  sliderIcons,
-  hasChanged,
-  idleSlider,
+  hasChanged = false,
+  idleSlider = '😴',
+  max = 100,
+  min = 0,
+  sliderIcons = ['😳'],
+  step = 1,
   value,
-  ...rest
+  onChange,
+  onBlur,
 }: StyledRangeProps) => {
   const icon = hasChanged
     ? getArrayValueFromPercent(value, sliderIcons)
@@ -61,18 +65,18 @@ const StyledRange = ({
           transform: translateY(-2px);
         }
       `}</style>
-      <input type="range" {...rest} value={value} />
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <input
+        max={max}
+        min={min}
+        step={step}
+        type="range"
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+      />
     </>
   );
-};
-
-StyledRange.defaultProps = {
-  max: 100,
-  min: 0,
-  step: 1,
-  sliderIcons: ['😳'],
-  idleSlider: '😴',
-  hasChanged: false,
 };
 
 export default StyledRange;
