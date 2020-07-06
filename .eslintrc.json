@@ -3,11 +3,5 @@
     "browser": true
   },
   "parser": "babel-eslint",
-  "extends": ["@otovo/eslint-config-otovo/react-recommended"],
-  "plugins": ["emotion"],
-  "rules": {
-    "emotion/no-vanilla": "error",
-    "emotion/import-from-emotion": "error",
-    "emotion/styled-import": "error"
-  }
+  "extends": ["@otovo/eslint-config-otovo/react-flow-recommended"]
 }

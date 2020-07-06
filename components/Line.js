@@ -1,35 +1,39 @@
 // @flow
 import React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import theme from '../styles/theme';
 
-type Props = {
+type Props = {|
   position: number,
-  contained?: boolean,
-};
+  wrapped: boolean,
+|};
 
-const StyledLine = styled.div`
-  position: absolute;
-  width: ${props => props.theme.sizes.lineWidth};
-  background-color: ${props => props.theme.colors.orange};
-  height: 100%;
-  left: ${props => props.position}%;
-`;
-
-const Line = ({ position, contained = false, ...rest }: Props = {}) => {
-  if (contained) {
-    return (
-      <div
-        css={theme => css`
-          width: ${theme.sizes.lineWidth};
-          position: relative;
-          z-index: 1;
-        `}>
-        <StyledLine position={position} {...rest} />
+const Line = ({ position, wrapped }: Props) => (
+  <>
+    <style jsx>{`
+      .vertical-line {
+        left: ${position}%;
+      }
+    `}</style>
+    <style jsx>{`
+      div {
+        width: ${theme.sizes.lineWidth};
+      }
+      .vertical-line {
+        position: absolute;
+        height: 100%;
+        background-color: ${theme.colors.orange};
+      }
+    `}</style>
+    {wrapped ? (
+      <div className="relative z-1">
+        <div className="vertical-line" />
       </div>
-    );
-  }
-  return <StyledLine position={position} {...rest} />;
+    ) : (
+      <div className="vertical-line" />
+    )}
+  </>
+);
+Line.defaultProps = {
+  wrapped: false,
 };
-
 export default Line;

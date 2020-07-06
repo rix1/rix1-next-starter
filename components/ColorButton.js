@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import { css } from '@emotion/core';
 
 type Props = {
   children: React$Node,
@@ -10,10 +9,7 @@ type Props = {
 const ColorButton = ({ children, className = '', ...rest }: Props = {}) => (
   <button
     type="button"
-    css={theme => css`
-      background-color: ${theme.colors.orange};
-    `}
-    className={`f4 fw4 white-90 pointer pv1 bn br2 w-100 pv2 ${className}`}
+    className={`f5 fw4 dim link navy underline pointer bg-transparent bn pv0 ${className}`}
     {...rest}>
     {children}
   </button>

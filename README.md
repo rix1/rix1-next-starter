@@ -5,7 +5,7 @@
 The kitchen has the following prepared for you
 
 - NextJS
-- Tachyons (from CDN) and Emotion for styling
+- Tachyons (from CDN) and styled-jsx for styling
 - Flow
 - Jest
 - ESLint
@@ -25,7 +25,7 @@ This runs the server in production.
 
 ### Built With
 
-This project uses [Next.js](nextjs.org) which makes it easy to create React apps with zero config. Styling is done with [Tachyons](http://tachyons.io/), and custom stuff is achieved with [Emotion](https://emotion.sh/).
+This project uses [Next.js](nextjs.org) which makes it easy to create React apps with zero config. Styling is done with [Tachyons](http://tachyons.io/), and custom stuff is achieved with [styled-jsx](https://github.com/vercel/styled-jsx).
 
 ### Prerequisites
 
