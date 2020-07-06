@@ -34,9 +34,11 @@ export default class MyApp extends App {
 
           <footer className="tc f6 moon-gray mb3 mt7">
             Created by{' '}
-            <Link className="underline silver" href="https://twitter.com/rix1">
+            <a
+              className="f5 fw4 dim link near-black pv1 underline silver"
+              href="https://twitter.com/rix1">
               rix1
-            </Link>
+            </a>
           </footer>
         </div>
       </Container>
