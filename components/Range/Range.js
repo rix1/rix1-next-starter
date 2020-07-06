@@ -1,6 +1,6 @@
 // @flow
 import React, { useState } from 'react';
-import uuid from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 import Line from '../Line';
 import StyledRange from './StyledRange';
@@ -25,7 +25,7 @@ type Props = {|
   className: string,
   separators: number,
   ...React$ElementConfig<typeof StyledRange>,
-  onChange: number => void,
+  onChange: (number) => void,
 |};
 
 const Range = (props: Props) => {
@@ -54,8 +54,8 @@ const Range = (props: Props) => {
         backgroundColor: `hsla(48, ${value}%, ${100 - 0.25 * value}%, 1 )`,
       }}>
       {!!separators &&
-        createLineSegments(separators).map(separator => (
-          <Line key={uuid()} position={separator} />
+        createLineSegments(separators).map((separator) => (
+          <Line key={uuidv4()} position={separator} />
         ))}
       <StyledRange
         sliderIcons={sliderIcons}
@@ -63,7 +63,6 @@ const Range = (props: Props) => {
         idleSlider={idleSlider}
         onChange={onChangeHandler}
         value={value}
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       />
     </div>
